@@ -48,13 +48,16 @@ heron a b c = sqrt (s * (s - a) * (s - b) * (s - c))
     where
     s = (a + b + c) / 2
 
-where - allows to show results as they get closer
+where - allows us to define intermediate results local to a function
 
-Variables store values (which can be any arbitrary Haskell expression).
+TLDR:
+Variables store values (any arbitrary Haskell expression).
 Variables do not change within a scope.
 Functions help you write reusable code.
 Functions can accept more than one parameter.
-We also learned about non-code text comments within a source file. 
+Non-code text comments within a source file. 
+
+
 
 
 
