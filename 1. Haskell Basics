@@ -1,0 +1,61 @@
+.hs
+
+Allows you to load an .hs in GHCi
+:load 
+:l 
+
+Allows you to reload an .hs in GHCi
+:reload
+:r
+
+Exit GHCi
+:quit
+
+Allows you to define a variable in GHCi quickly.
+let 
+
+let area r = (pi ^ 2) * r
+let a = 3.14
+
+Comments
+--two dashes before text - single line comments 
+{- multi-line comments are surrounded by a curly brace and dash -}
+
+Variables
+-are immutable; once defined, they cannot be redefined. 
+
+This example is not acceptable.
+r = 2
+r = 5
+
+This example does not update value stored in memory.
+r = r + 1
+Instead, it defines r in terms of itself.
+
+The order of definition does not matter. 
+y = x * 2
+x = 3
+
+Functions
+functionName argumentName = functionDefinition
+
+-have higher precendence than most mathematical operators
+-can use multiple variables 
+-arugmets are always passed in order given
+
+ex:
+heron a b c = sqrt (s * (s - a) * (s - b) * (s - c))
+    where
+    s = (a + b + c) / 2
+
+where - allows to show results as they get closer
+
+Variables store values (which can be any arbitrary Haskell expression).
+Variables do not change within a scope.
+Functions help you write reusable code.
+Functions can accept more than one parameter.
+We also learned about non-code text comments within a source file. 
+
+
+
+
