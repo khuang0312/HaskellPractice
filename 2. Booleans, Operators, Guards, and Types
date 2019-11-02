@@ -1,0 +1,59 @@
+== for equality
+= for assignment
+
+True False
+
+Infix Operators
+===============================================================================================================================
+-Two argument functions can be written as infix operators between their arguments
+ex: 2 == 2
+ex:
+  divide x y = x / y
+  2 `divide` 3 (yes, you have to use those marks)
+
+-With function names consisting of non-alphanumeric characters, they are usually infix.
+ -Using such a function in "standard" form (prefix) requires the name to be in parentheses
+  ex: (==) 2 2
+  
+&&  - and
+||  - or
+not - not
+
+/= - not equal
+
+-You can even write operators as infix while defining them!
+x /= y = not (x == y)
+
+Guards
+===============================================================================================================================
+|x| = { x, if x >= 0.
+      { x, if x < 0.
+
+absolute x
+  | x < 0 = -x   
+  | otherwise = x
+  
+1. guards are indent, pipe, boolean expression (predicate), then definition
+2. otherwise executes when all previous guards are not True; therefore, keep otherwise at the end
+   (this works because otherwise is basically defined as True)
+
+Types
+================================================================================================================================
+All type names have to begin with a capital letter
+Types specify what you can and cannot do with data
+
+:type, :t - gives type of value
+
+:: - is of type (indicates type signature)
+ex: True :: Bool
+
+Char - single quotes
+String ([Char]) - double quotes
+
+Intersting thing... if you do :t "C", it will give you "C" :: [Char]
+
+-Haskell has type synonyms. You can do "Hello World" :: String or "Hello World" :: [Char]. 
+ Both are perfectly acceptable.
+
+Function types
+==================================================================================================================================
